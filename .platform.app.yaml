@@ -38,7 +38,7 @@ mounts:
     "/app/cache": "shared:files/cache"
     "/app/config": "shared:files/config"
     "/app/database": "shared:files/database"
-    "/app/extensions": "shared:files/app-extensions
+    "/app/extensions": "shared:files/app-extensions"
     "/public/extensions": "shared:files/pub-extensions"
     "/public/files": "shared:files/files"
     "/public/themes": "shared:files/themes"
