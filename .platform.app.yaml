@@ -35,8 +35,11 @@ web:
 disk: 2048
 # The mounts that will be performed when the package is deployed.
 mounts:
-    "/app": "shared:files/app"
-    "/public/extensions": "shared:files/extensions"
+    "/app/cache": "shared:files/cache"
+    "/app/config": "shared:files/config"
+    "/app/database": "shared:files/database"
+    "/app/extensions": "shared:files/app-extensions"
+    "/public/extensions": "shared:files/pub-extensions"
     "/public/files": "shared:files/files"
     "/public/themes": "shared:files/themes"
     "/public/thumbs": "shared:files/thumbs"
@@ -47,5 +50,6 @@ hooks:
       mkdir -p app/cache
       mkdir -p app/database
       mkdir -p app/extensions
+      mkdir extensions
     deploy: |
       php platform_config.php
