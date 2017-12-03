@@ -48,5 +48,6 @@ hooks:
     build: |
       mkdir -p app/cache
       mkdir -p app/database
+      mkdir -p app/extensions
     deploy: |
       php platform_config.php
