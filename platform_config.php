@@ -4,7 +4,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 if (!empty($_ENV['PLATFORM_RELATIONSHIPS'])){
     echo 'Writing Platform.sh database config...';
-    $relationships = json_decode(base64_decode($_ENV['PLATFORM_RELATIONSHIPS'], true));
+    $relationships = json_decode(base64_decode($_ENV['PLATFORM_RELATIONSHIPS']), true);
 
     $config = [
         'database' => [
