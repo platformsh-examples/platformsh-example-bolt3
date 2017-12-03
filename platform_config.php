@@ -13,10 +13,10 @@ if (!empty($_ENV['PLATFORM_RELATIONSHIPS'])){
             'password' => $relationships['database'][0]['password'],
             'host' => $relationships['database'][0]['host']
         ],
-        'debug' => 'false',
+        'debug' => false,
         'mailoptions' => [
             'transport' => 'mail',
-            'spool' => 'false'
+            'spool' => false
         ]
     ];
 
