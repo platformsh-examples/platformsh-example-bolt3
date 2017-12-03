@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ . 'vendor/autoload.php';
+require_once __DIR__ . '/vendor/autoload.php';
 
 if (!empty($_ENV['PLATFORM_RELATIONSHIPS'])){
     echo 'Writing Platform.sh database config...';
