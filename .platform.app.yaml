@@ -26,10 +26,6 @@ web:
             root: "public"
             # The front-controller script to send non-static requests to.
             passthru: "/index.php"
-            # The number of seconds whitelisted (static) content should be cached.
-            expires: 600
-            scripts: true
-            allow: true
 
 # The size of the persistent disk of the application (in MB).
 disk: 2048
@@ -38,18 +34,12 @@ mounts:
     "/app/cache": "shared:files/cache"
     "/app/config": "shared:files/config"
     "/app/database": "shared:files/database"
-    "/app/extensions": "shared:files/app-extensions"
-    "/public/extensions": "shared:files/pub-extensions"
+    "/public/extensions": "shared:files/extensions"
     "/public/files": "shared:files/files"
     "/public/themes": "shared:files/themes"
     "/public/thumbs": "shared:files/thumbs"
 
 # The hooks that will be performed when the package is deployed.
 hooks:
-    build: |
-      mkdir -p app/cache
-      mkdir -p app/database
-      mkdir -p app/extensions
-      mkdir extensions
     deploy: |
       php platform_config.php
